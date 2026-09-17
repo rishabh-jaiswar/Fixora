@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neumorphism Login</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #e0e5ec;
+        }
+
+
+        /* =========================
+           LOGIN CARD
+        ========================= */
+
+        .login-card {
+            width: 380px;
+
+            padding: 45px 40px;
+
+            background: #e0e5ec;
+
+            border-radius: 25px;
+
+            box-shadow:
+                12px 12px 25px #a3b1c6,
+                -12px -12px 25px #ffffff;
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo {
+            width: 80px;
+            height: 80px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            color: #5b6b82;
+            font-size: 30px;
+
+            background: #e0e5ec;
+
+            box-shadow:
+                8px 8px 15px #a3b1c6,
+                -8px -8px 15px #ffffff;
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        h1 {
+            text-align: center;
+
+            color: #3f4c5c;
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .subtitle {
+            text-align: center;
+
+            color: #7b8798;
+
+            font-size: 14px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           INPUT BOX
+        ========================= */
+
+        .input-box {
+            position: relative;
+
+            margin-bottom: 25px;
+        }
+
+
+        .input-box i {
+            position: absolute;
+
+            left: 18px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: #7b8798;
+
+            font-size: 16px;
+        }
+
+
+        .input-box input {
+            width: 100%;
+            height: 52px;
+
+            padding: 0 50px;
+
+            border: none;
+            outline: none;
+
+            border-radius: 15px;
+
+            background: #e0e5ec;
+
+            color: #3f4c5c;
+
+            font-size: 15px;
+
+            box-shadow:
+                inset 5px 5px 10px #a3b1c6,
+                inset -5px -5px 10px #ffffff;
+        }
+
+
+        .input-box input::placeholder {
+            color: #8d99a9;
+        }
+
+
+        /* =========================
+           PASSWORD EYE
+        ========================= */
+
+        .input-box .eye {
+            left: auto;
+            right: 18px;
+
+            cursor: pointer;
+
+            pointer-events: auto;
+        }
+
+
+        /* =========================
+           FORGOT PASSWORD
+        ========================= */
+
+        .forgot {
+            text-align: right;
+
+            margin: -8px 0 25px;
+        }
+
+
+        .forgot a {
+            color: #65758b;
+
+            font-size: 13px;
+
+            text-decoration: none;
+        }
+
+
+        .forgot a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           LOGIN BUTTON
+        ========================= */
+
+        .login-btn {
+            width: 100%;
+            height: 52px;
+
+            border: none;
+            border-radius: 15px;
+
+            background: #e0e5ec;
+
+            color: #52657d;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                7px 7px 14px #a3b1c6,
+                -7px -7px 14px #ffffff;
+
+            transition: 0.2s;
+        }
+
+
+        .login-btn:hover {
+            color: #3e536d;
+        }
+
+
+        .login-btn:active {
+            box-shadow:
+                inset 5px 5px 10px #a3b1c6,
+                inset -5px -5px 10px #ffffff;
+
+            transform: scale(0.98);
+        }
+
+
+        /* =========================
+           DIVIDER
+        ========================= */
+
+        .divider {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 28px 0;
+        }
+
+
+        .divider span {
+            flex: 1;
+
+            height: 1px;
+
+            background: #c1c9d4;
+        }
+
+
+        .divider p {
+            color: #8a96a6;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           SOCIAL BUTTONS
+        ========================= */
+
+        .social {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+        }
+
+
+        .social a {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 14px;
+
+            color: #66778e;
+
+            text-decoration: none;
+
+            background: #e0e5ec;
+
+            box-shadow:
+                6px 6px 12px #a3b1c6,
+                -6px -6px 12px #ffffff;
+
+            transition: 0.2s;
+        }
+
+
+        .social a:hover {
+            color: #3f526a;
+        }
+
+
+        .social a:active {
+            box-shadow:
+                inset 4px 4px 8px #a3b1c6,
+                inset -4px -4px 8px #ffffff;
+        }
+
+
+        /* =========================
+           REGISTER
+        ========================= */
+
+        .register {
+            text-align: center;
+
+            margin-top: 30px;
+
+            color: #7b8798;
+
+            font-size: 14px;
+        }
+
+
+        .register a {
+            color: #526b88;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 450px) {
+
+            .login-card {
+                width: 90%;
+
+                padding: 35px 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- LOGIN CARD -->
+
+    <div class="login-card">
+
+
+        <!-- Logo -->
+
+        <div class="logo">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+
+        <!-- Heading -->
+
+        <h1>Welcome Back</h1>
+
+        <p class="subtitle">
+            Login to your account
+        </p>
+
+
+        <!-- Login Form -->
+
+        <form onsubmit="login(event)">
+
+
+            <!-- Username -->
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    required>
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required>
+
+                <i
+                    class="fa-solid fa-eye eye"
+                    id="eye"
+                    onclick="togglePassword()">
+                </i>
+
+            </div>
+
+
+            <!-- Forgot Password -->
+
+            <div class="forgot">
+
+                <a href="#">
+                    Forgot Password?
+                </a>
+
+            </div>
+
+
+            <!-- Login -->
+
+            <button
+                type="submit"
+                class="login-btn">
+
+                Login
+
+            </button>
+
+
+        </form>
+
+
+        <!-- Divider -->
+
+        <div class="divider">
+
+            <span></span>
+
+            <p>OR</p>
+
+            <span></span>
+
+        </div>
+
+
+        <!-- Social Login -->
+
+        <div class="social">
+
+            <a href="#">
+                <i class="fa-brands fa-google"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+        </div>
+
+
+        <!-- Register -->
+
+        <p class="register">
+
+            Don't have an account?
+
+            <a href="registration.html">
+                Register
+            </a>
+
+        </p>
+
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        /* =========================
+           LOGIN
+        ========================= */
+
+        function login(event) {
+
+            event.preventDefault();
+
+            let username =
+                document.getElementById("username").value;
+
+            let password =
+                document.getElementById("password").value;
+
+
+            if (username === "ris@123" && password === "123") {
+
+                alert("Login successful!");
+
+            } else {
+
+                alert("Invalid username or password!");
+
+            }
+
+        }
+
+
+        /* =========================
+           SHOW / HIDE PASSWORD
+        ========================= */
+
+        function togglePassword() {
+
+            let password =
+                document.getElementById("password");
+
+            let eye =
+                document.getElementById("eye");
+
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                eye.classList.remove("fa-eye");
+
+                eye.classList.add("fa-eye-slash");
+
+            } else {
+
+                password.type = "password";
+
+                eye.classList.remove("fa-eye-slash");
+
+                eye.classList.add("fa-eye");
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+

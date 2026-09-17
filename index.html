@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="plumber,mechanic,AC repair,painting,carpentry,electrician,appliance repair">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+   
+    <title>Fixora</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+             font-family: Arial, Helvetica, sans-serif;
+             font-family: "Ubuntu", sans-serif;
+             font-weight: 400;
+             font-style: normal;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color:black;
+            
+
+        }
+        nav #logo{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+        }
+        nav #menu1{
+            display: flex;
+            align-items: center;
+        }
+        nav #menu1 ul{
+            display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    nav #menu2{
+        display: flex;
+        align-items: center;
+    }
+    nav #menu1 ul a{
+        text-decoration: none;
+        color: aliceblue;
+    }
+    
+    nav #menu1 ul a:hover{
+        color: greenyellow;
+    }
+    nav #menu2 {
+        display: flex;
+        align-itens: center;
+        gap: 20px;
+    }
+    
+    #login,
+    #sign-up{
+        height:40px;
+        border-radius: 10px;
+        font-size:13px;
+        cursor: pointer;
+
+    }
+    #login{
+        padding: 0px 20px;
+        background: transparent;
+        color: white;
+
+        border: 1px solid #252d33
+    }
+    #sign-up{
+         padding: 0 22px;
+
+         background: #c8ff19;
+         color: #101500;
+
+         border: 1px solid #c8ff19;
+
+         font-weight: 700;
+    }
+    #login:hover {
+    background: #151b1f;
+   }
+   #sign-up:hover{
+    background: #7f9b1b;
+   }
+
+   .hero{
+    min-height:500px;
+    display: flex;
+    align-items: center;
+    padding: 35px 76px 50px;
+    background: black;
+     overflow: hidden;
+   }
+   .hero-content{
+    width: 48%;
+    display: flex;
+    position: relative;
+    z-index: 2;
+   }
+   .trusted{
+    width:fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+     padding: 9px 15px;
+
+    border: 1px solid #c8ff19;
+    border-radius: 20px;
+
+    background: #080d11;
+
+    color: #c8ff19;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+   }
+   .trusted b{
+    color: #c8ff19;
+    font-size: 7px;
+   }
+   .hero h1 {
+    margin-top: 28px;
+
+    font-size: 50px;
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+
+    color: #f5f5f5;
+}
+.hero h1 span{
+        color: #c8ff19;
+}
+.hero-content > p {
+    margin-top: 18px;
+
+    color: rgb(197, 184, 184);
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <img src="fixora.png" alt = "BiteBox" width = "100px" height = "100px" >
+            </div>
+            
+            <div id="menu1">
+                <ul style="list-style: none;">
+                    <li><a href="">Services</a></li>
+                    <li><a href="">How it works</a></li>
+                    <li><a href="">Offer</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </div>
+            <div id="menu2">
+                <button id="login">Login</button>
+                <button id="sign-up">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="trusted">
+                     <span>👥</span>
+                      TRUSTED BY 25,000+ HAPPY CUSTOMERS
+                       <b>●</b>
+                </div>
+                <h1>
+                Home services,
+                <br>
+                <span>redesigned</span> for you.
+            </h1>
+             <p>
+                Book verified professionals for your home and get
+                <br>
+                quality service at your convenience.
+            </p>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
