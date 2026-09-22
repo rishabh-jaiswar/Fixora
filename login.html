@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Neumorphism Login</title>
+    <title>Login</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,567 +16,60 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <style>
-
-        /* =========================
-           RESET
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Ubuntu", sans-serif;
-        }
-
-
-        /* =========================
-           BODY
-        ========================= */
-
-        body {
-            min-height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background: #e0e5ec;
-        }
-
-
-        /* =========================
-           LOGIN CARD
-        ========================= */
-
-        .login-card {
-            width: 380px;
-
-            padding: 45px 40px;
-
-            background: #e0e5ec;
-
-            border-radius: 25px;
-
-            box-shadow:
-                12px 12px 25px #a3b1c6,
-                -12px -12px 25px #ffffff;
-        }
-
-
-        /* =========================
-           LOGO
-        ========================= */
-
-        .logo {
-            width: 80px;
-            height: 80px;
-
-            margin: 0 auto 20px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 50%;
-
-            color: #5b6b82;
-            font-size: 30px;
-
-            background: #e0e5ec;
-
-            box-shadow:
-                8px 8px 15px #a3b1c6,
-                -8px -8px 15px #ffffff;
-        }
-
-
-        /* =========================
-           TITLE
-        ========================= */
-
-        h1 {
-            text-align: center;
-
-            color: #3f4c5c;
-
-            font-size: 30px;
-
-            margin-bottom: 8px;
-        }
-
-
-        .subtitle {
-            text-align: center;
-
-            color: #7b8798;
-
-            font-size: 14px;
-
-            margin-bottom: 35px;
-        }
-
-
-        /* =========================
-           INPUT BOX
-        ========================= */
-
-        .input-box {
-            position: relative;
-
-            margin-bottom: 25px;
-        }
-
-
-        .input-box i {
-            position: absolute;
-
-            left: 18px;
-            top: 50%;
-
-            transform: translateY(-50%);
-
-            color: #7b8798;
-
-            font-size: 16px;
-        }
-
-
-        .input-box input {
-            width: 100%;
-            height: 52px;
-
-            padding: 0 50px;
-
-            border: none;
-            outline: none;
-
-            border-radius: 15px;
-
-            background: #e0e5ec;
-
-            color: #3f4c5c;
-
-            font-size: 15px;
-
-            box-shadow:
-                inset 5px 5px 10px #a3b1c6,
-                inset -5px -5px 10px #ffffff;
-        }
-
-
-        .input-box input::placeholder {
-            color: #8d99a9;
-        }
-
-
-        /* =========================
-           PASSWORD EYE
-        ========================= */
-
-        .input-box .eye {
-            left: auto;
-            right: 18px;
-
-            cursor: pointer;
-
-            pointer-events: auto;
-        }
-
-
-        /* =========================
-           FORGOT PASSWORD
-        ========================= */
-
-        .forgot {
-            text-align: right;
-
-            margin: -8px 0 25px;
-        }
-
-
-        .forgot a {
-            color: #65758b;
-
-            font-size: 13px;
-
-            text-decoration: none;
-        }
-
-
-        .forgot a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================
-           LOGIN BUTTON
-        ========================= */
-
-        .login-btn {
-            width: 100%;
-            height: 52px;
-
-            border: none;
-            border-radius: 15px;
-
-            background: #e0e5ec;
-
-            color: #52657d;
-
-            font-size: 16px;
-            font-weight: bold;
-
-            cursor: pointer;
-
-            box-shadow:
-                7px 7px 14px #a3b1c6,
-                -7px -7px 14px #ffffff;
-
-            transition: 0.2s;
-        }
-
-
-        .login-btn:hover {
-            color: #3e536d;
-        }
-
-
-        .login-btn:active {
-            box-shadow:
-                inset 5px 5px 10px #a3b1c6,
-                inset -5px -5px 10px #ffffff;
-
-            transform: scale(0.98);
-        }
-
-
-        /* =========================
-           DIVIDER
-        ========================= */
-
-        .divider {
-            display: flex;
-            align-items: center;
-
-            gap: 12px;
-
-            margin: 28px 0;
-        }
-
-
-        .divider span {
-            flex: 1;
-
-            height: 1px;
-
-            background: #c1c9d4;
-        }
-
-
-        .divider p {
-            color: #8a96a6;
-
-            font-size: 12px;
-        }
-
-
-        /* =========================
-           SOCIAL BUTTONS
-        ========================= */
-
-        .social {
-            display: flex;
-
-            justify-content: center;
-
-            gap: 15px;
-        }
-
-
-        .social a {
-            width: 48px;
-            height: 48px;
-
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 14px;
-
-            color: #66778e;
-
-            text-decoration: none;
-
-            background: #e0e5ec;
-
-            box-shadow:
-                6px 6px 12px #a3b1c6,
-                -6px -6px 12px #ffffff;
-
-            transition: 0.2s;
-        }
-
-
-        .social a:hover {
-            color: #3f526a;
-        }
-
-
-        .social a:active {
-            box-shadow:
-                inset 4px 4px 8px #a3b1c6,
-                inset -4px -4px 8px #ffffff;
-        }
-
-
-        /* =========================
-           REGISTER
-        ========================= */
-
-        .register {
-            text-align: center;
-
-            margin-top: 30px;
-
-            color: #7b8798;
-
-            font-size: 14px;
-        }
-
-
-        .register a {
-            color: #526b88;
-
-            font-weight: bold;
-
-            text-decoration: none;
-        }
-
-
-        .register a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 450px) {
-
-            .login-card {
-                width: 90%;
-
-                padding: 35px 25px;
-            }
-
-        }
-
-    </style>
-</head>
-
-
-<body>
-
-
-    <!-- LOGIN CARD -->
-
-    <div class="login-card">
-
-
-        <!-- Logo -->
-
-        <div class="logo">
-            <i class="fa-solid fa-user"></i>
-        </div>
-
-
-        <!-- Heading -->
-
-        <h1>Welcome Back</h1>
-
-        <p class="subtitle">
-            Login to your account
-        </p>
-
-
-        <!-- Login Form -->
-
-        <form onsubmit="login(event)">
-
-
-            <!-- Username -->
-
-            <div class="input-box">
-
-                <i class="fa-solid fa-user"></i>
-
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="Username"
-                    required>
-
-            </div>
-
-
-            <!-- Password -->
-
-            <div class="input-box">
-
-                <i class="fa-solid fa-lock"></i>
-
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    required>
-
-                <i
-                    class="fa-solid fa-eye eye"
-                    id="eye"
-                    onclick="togglePassword()">
-                </i>
-
-            </div>
-
-
-            <!-- Forgot Password -->
-
-            <div class="forgot">
-
-                <a href="#">
-                    Forgot Password?
-                </a>
-
-            </div>
-
-
-            <!-- Login -->
-
-            <button
-                type="submit"
-                class="login-btn">
-
-                Login
-
-            </button>
-
-
-        </form>
-
-
-        <!-- Divider -->
-
-        <div class="divider">
-
-            <span></span>
-
-            <p>OR</p>
-
-            <span></span>
-
-        </div>
-
-
-        <!-- Social Login -->
-
-        <div class="social">
-
-            <a href="#">
-                <i class="fa-brands fa-google"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-        </div>
-
-
-        <!-- Register -->
-
-        <p class="register">
-
-            Don't have an account?
-
-            <a href="registration.html">
-                Register
-            </a>
-
-        </p>
-
-
-    </div>
-
-
-    <!-- JAVASCRIPT -->
-
     <script>
 
-        /* =========================
-           LOGIN
-        ========================= */
+        /* Login function */
+        function login(e) {
 
-        function login(event) {
+            e.preventDefault();
 
-            event.preventDefault();
+            // let data = [
+            //     {
+            //         username: "ris@123",
+            //         userpassword: "123"
+            //     },
 
-            let username =
-                document.getElementById("username").value;
+            //     {
+            //         username: "om@123",
+            //         userpassword: "12389"
+            //     },
 
-            let password =
-                document.getElementById("password").value;
+            //     {
+            //         username: "raj@123",
+            //         userpassword: "12356"
+            //     }
+            // ];
+
+            let data=JSON.parse(localStorage.getItem("registeruser"))// to read the data from localstorage  11.mrh
+            console.log(data);
+            //console.log(Object.keys(data));
+            let k= Object.keys(data);
+            console.log(k);
+            
 
 
-            if (username === "ris@123" && password === "123") {
+            var username =
+                document.getElementById("loginUsername").value;
+
+            var password =
+                document.getElementById("loginPassword").value;
+
+
+            let result = data.find(function(user) {
+
+                return user.username === username &&
+                       user.userpassword === password;
+
+            });
+
+
+            if (result) {
 
                 alert("Login successful!");
 
             } else {
 
-                alert("Invalid username or password!");
-
-            }
-
-        }
-
-
-        /* =========================
-           SHOW / HIDE PASSWORD
-        ========================= */
-
-        function togglePassword() {
-
-            let password =
-                document.getElementById("password");
-
-            let eye =
-                document.getElementById("eye");
-
-
-            if (password.type === "password") {
-
-                password.type = "text";
-
-                eye.classList.remove("fa-eye");
-
-                eye.classList.add("fa-eye-slash");
-
-            } else {
-
-                password.type = "password";
-
-                eye.classList.remove("fa-eye-slash");
-
-                eye.classList.add("fa-eye");
+                alert("Login failed! Invalid username or password.");
 
             }
 
@@ -584,6 +77,406 @@
 
     </script>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: grey;
+        }
+
+        /* Main container */
+        .container {
+            position: relative;
+            width: 850px;
+            height: 550px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* Login form */
+        .form-box {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background: white;
+            right: 0;
+
+            display: flex;
+            align-items: center;
+
+            color: #333;
+            text-align: center;
+
+            padding: 40px;
+            z-index: 1;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            margin: -10px 0 10px;
+        }
+
+        /* Input container */
+        .input-box {
+            position: relative;
+            width: 100%;
+            margin: 30px 0;
+        }
+
+        /* Input */
+        .input-box input {
+            width: 100%;
+            height: 50px;
+
+            padding: 13px 50px 13px 15px;
+
+            background: #dbd7d7;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .input-box input::placeholder {
+            font-weight: 400;
+            color: #888;
+        }
+
+        /* Icons */
+        .input-box i {
+            position: absolute;
+
+            right: 15px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 20px;
+            color: #555;
+
+            pointer-events: none;
+        }
+
+        /* Password eye icon */
+        .input-box .eye-icon {
+            pointer-events: auto;
+            cursor: pointer;
+            right: 15px;
+        }
+
+        /* Forgot password */
+        .forget {
+            margin: 17px 0;
+            text-align: right;
+        }
+
+        .forget a {
+            font-size: 14.5px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .forget a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login button */
+        .btn {
+            width: 100%;
+            height: 48px;
+
+            background: #7494ec;
+
+            border-radius: 8px;
+            border: none;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            cursor: pointer;
+
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #5f7fe0;
+        }
+
+        /* Social text */
+        .container p {
+            font-size: 14.5px;
+            margin: 15px 0;
+        }
+
+        /* Social icons */
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-icon a {
+            display: inline-flex;
+
+            justify-content: center;
+            align-items: center;
+
+            width: 45px;
+            height: 45px;
+
+            border: 1px solid #ccc;
+            border-radius: 8px;
+
+            font-size: 20px;
+            color: #333;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .social-icon a:hover {
+            background: #7494ec;
+            color: white;
+            border-color: #7494ec;
+        }
+
+        /* Green side panel */
+        .toggle-box {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        .toggle-panel {
+            position: absolute;
+
+            width: 50%;
+            height: 100%;
+
+            background: seagreen;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+        }
+
+        .toggle-panel h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .toggle-panel p {
+            margin-bottom: 20px;
+        }
+
+        /* Register button */
+        .toggle-panel button {
+            width: 160px;
+            height: 48px;
+
+            background: transparent;
+
+            border: 2px solid white;
+            border-radius: 8px;
+
+            box-shadow: none;
+
+            color: white;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .toggle-panel button:hover {
+            background: white;
+            color: seagreen;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+
+            .container {
+                width: 90%;
+            }
+
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .container {
+                width: 95%;
+                height: auto;
+                min-height: 550px;
+            }
+
+            .form-box {
+                width: 100%;
+                position: relative;
+                padding: 30px;
+            }
+
+            .toggle-box {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LOGIN FORM -->
+        <div class="form-box">
+
+            <form >
+
+                <h1>Login</h1>
+
+                <!-- Username -->
+                <div class="input-box">
+
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        id="loginUsername"
+                        required>
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-box">
+
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        id="loginPassword"
+                        required>
+
+                    <i
+                        class="fa-solid fa-eye eye-icon"
+                        id="eyeIcon"
+                        >
+                    </i>
+
+                </div>
+
+
+                <!-- Forgot Password -->
+                <div class="forget">
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    class="btn"
+                     onclick="login(event)">
+                    Login
+
+                </button>
+
+
+                <!-- Social Login -->
+                <p>
+                    or Login with social platform
+                </p>
+
+
+                <div class="social-icon">
+
+                    <a href="#">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- GREEN PANEL -->
+        <div class="toggle-box">
+
+            <div class="toggle-panel">
+
+                <h1>
+                    Hello, Welcome!
+                </h1>
+
+                <p>
+                    Don't have an account?
+                </p>
+
+                <button
+                    type="button"
+                    onclick="goToRegister()">
+
+                    Register
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
 
 </body>
 
