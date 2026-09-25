@@ -1,202 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keyword" content="plumber,mechanic,AC repair,painting,carpentry,electrician,appliance repair">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-   
-    <title>Fixora</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-             font-family: Arial, Helvetica, sans-serif;
-             font-family: "Ubuntu", sans-serif;
-             font-weight: 400;
-             font-style: normal;
-        }
-        nav{
-            display: flex;
-            justify-content: space-between;
-            background-color:black;
-            
 
-        }
-        nav #logo{
-            display: flex;
-            align-items: center;
-            gap: 20px;
+    <title>Servizo</title>
 
-        }
-        nav #menu1{
-            display: flex;
-            align-items: center;
-        }
-        nav #menu1 ul{
-            display: flex;
-        align-items: center;
-        gap: 40px;
-    }
-    nav #menu2{
-        display: flex;
-        align-items: center;
-    }
-    nav #menu1 ul a{
-        text-decoration: none;
-        color: aliceblue;
-    }
-    
-    nav #menu1 ul a:hover{
-        color: greenyellow;
-    }
-    nav #menu2 {
-        display: flex;
-        align-itens: center;
-        gap: 20px;
-    }
-    
-    #login,
-    #sign-up{
-        height:40px;
-        border-radius: 10px;
-        font-size:13px;
-        cursor: pointer;
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-    }
-    #login{
-        padding: 0px 20px;
-        background: transparent;
-        color: white;
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-        border: 1px solid #252d33
-    }
-    #sign-up{
-         padding: 0 22px;
-
-         background: #c8ff19;
-         color: #101500;
-
-         border: 1px solid #c8ff19;
-
-         font-weight: 700;
-    }
-    #login:hover {
-    background: #151b1f;
-   }
-   #sign-up:hover{
-    background: #7f9b1b;
-   }
-
-   .hero{
-    min-height:500px;
-    display: flex;
-    align-items: center;
-    padding: 35px 76px 50px;
-    background: black;
-     overflow: hidden;
-   }
-   .hero-content{
-    width: 48%;
-    display: flex;
-    position: relative;
-    z-index: 2;
-   }
-   .trusted{
-    width:fit-content;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-     padding: 9px 15px;
-
-    border: 1px solid #c8ff19;
-    border-radius: 20px;
-
-    background: #080d11;
-
-    color: #c8ff19;
-
-    font-size: 10px;
-    font-weight: 600;
-
-    letter-spacing: 0.3px;
-   }
-   .trusted b{
-    color: #c8ff19;
-    font-size: 7px;
-   }
-   .hero h1 {
-    margin-top: 28px;
-
-    font-size: 50px;
-    line-height: 1.08;
-
-    font-weight: 700;
-
-    letter-spacing: -1.5px;
-
-    color: #f5f5f5;
-}
-.hero h1 span{
-        color: #c8ff19;
-}
-.hero-content > p {
-    margin-top: 18px;
-
-    color: rgb(197, 184, 184);
-
-    font-size: 15px;
-
-    line-height: 1.5;
-}
-
-    </style>
 </head>
+
+
 <body>
-    <header>
-        <nav>
-            <div id="logo">
-                <img src="fixora.png" alt = "BiteBox" width = "100px" height = "100px" >
-            </div>
-            
-            <div id="menu1">
-                <ul style="list-style: none;">
-                    <li><a href="">Services</a></li>
-                    <li><a href="">How it works</a></li>
-                    <li><a href="">Offer</a></li>
-                    <li><a href="">Help</a></li>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+
+            <!-- LOGO -->
+
+            <a class="navbar-brand" href="#">
+
+                <span class="logo-box">
+                    <img src="image/House Renovation.jpg" alt="logo">
+                </span>
+
+                <span class="logo-text">
+                    Fixora
+
+                    <small>
+                        We fix. You relax.
+                    </small>
+
+                </span>
+
+            </a>
+
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- NAVBAR CONTENT -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarContent">
+
+
+                <!-- NAVIGATION LINKS -->
+
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#">
+
+                            Services
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#">
+
+                            How it Works
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#">
+
+                            Offers
+
+                        </a>
+
+                    </li>
+
+
+                   
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#">
+
+                            Help
+
+                        </a>
+
+                    </li>
+
                 </ul>
-            </div>
-            <div id="menu2">
-                <button id="login">Login</button>
-                <button id="sign-up">Sign Up</button>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="trusted">
-                     <span>👥</span>
-                      TRUSTED BY 25,000+ HAPPY CUSTOMERS
-                       <b>●</b>
+
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="navbar-actions">
+
+
+                    <!-- LOCATION -->
+
+                    <span class="location">
+
+                        📍 Mumbai
+
+                    </span>
+
+
+                    <!-- LOGIN -->
+
+                    <button class="btn btn-login">
+
+                        Login
+
+                    </button>
+
+
+                    <!-- SIGN UP -->
+
+                    <button class="btn btn-signup">
+
+                        Sign Up
+
+                    </button>
+
+
                 </div>
-                <h1>
-                Home services,
-                <br>
-                <span>redesigned</span> for you.
-            </h1>
-             <p>
-                Book verified professionals for your home and get
-                <br>
-                quality service at your convenience.
-            </p>
+
             </div>
-        </section>
-    </main>
-    <footer></footer>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================
+         HERO SECTION
+    ====================================== -->
+
+    <section class="hero-section">
+
+        <div class="container">
+
+
+            <div class="hero-card">
+
+
+                <div class="row align-items-center">
+
+
+                    <!-- =================================
+                         LEFT SIDE
+                    ================================== -->
+
+                    <div class="col-lg-7">
+
+
+                        <!-- TRUST BADGE -->
+
+                        <div class="hero-badge">
+
+                            ● Trusted by 25,000+ happy customers
+
+                        </div>
+
+
+
+                        <!-- HEADING -->
+
+                        <h1 class="hero-title">
+
+                            Home services,
+
+                            <span>
+                                redesigned
+                            </span>
+
+                            for you.
+
+                        </h1>
+
+
+
+                        <!-- DESCRIPTION -->
+
+                        <p class="hero-description">
+
+                            Book verified professionals for your home
+                            and get quality service at your convenience —
+                            from plumbing to appliance repair.
+
+                        </p>
+
+
+
+                        <!-- SEARCH BOX -->
+
+                        <div class="search-box">
+
+
+                            <!-- LOCATION -->
+
+                            <div class="search-field">
+
+                                <label>
+                                    Location
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Mumbai, Maharashtra">
+
+                            </div>
+
+
+
+                            <!-- SERVICE -->
+
+                            <div class="search-field">
+
+                                <label>
+                                    Service
+                                </label>
+
+                                <input
+                                    type="text"
+                                    placeholder="What service do you need?">
+
+                            </div>
+
+
+
+                            <!-- SEARCH BUTTON -->
+
+                            <button class="search-btn">
+
+                                →
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- FEATURES -->
+
+                        <div class="features">
+
+
+                            <div class="feature">
+
+                                <span>
+                                    🛡️
+                                </span>
+
+                                Verified Professionals
+
+                            </div>
+
+
+                            <div class="feature">
+
+                                <span>
+                                    💳
+                                </span>
+
+                                Upfront Pricing
+
+                            </div>
+
+
+                            <div class="feature">
+
+                                <span>
+                                    ⏱️
+                                </span>
+
+                                On-time Service
+
+                            </div>
+
+
+                            <div class="feature">
+
+                                <span>
+                                    🔒
+                                </span>
+
+                                Secure Payments
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         RIGHT SIDE
+                    ================================== -->
+
+                    <div class="col-lg-5">
+
+
+                        <div class="hero-right">
+
+
+                            <!-- RATING -->
+
+                            <div class="rating">
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <strong>
+                                    10,000+
+                                </strong>
+
+                                <p>
+                                    Verified Professionals
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- SERVICE CIRCLE -->
+
+                            <div class="service-circle">
+
+
+                                <div class="home-icon">
+
+                                    🏠
+
+                                </div>
+
+
+
+                                <!-- FLOATING CARD -->
+
+                                <div class="floating-card card-one">
+
+                                    🟢 Arriving in 12 mins
+
+                                </div>
+
+
+
+                                <!-- FLOATING CARD -->
+
+                                <div class="floating-card card-two">
+
+                                    🟢 4.9 rated pro
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     CTA BUTTONS
+                ================================== -->
+
+                <div class="hero-buttons">
+
+
+                    <button class="btn btn-dark">
+
+                        Book a Service
+
+                    </button>
+
+
+                    <button class="btn btn-outline-dark">
+
+                        Become a Pro
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 STATISTICS
+            ================================== -->
+
+            <div class="stats-bar">
+
+
+                <div class="stat">
+
+                    <h3>
+                        25,000+
+                    </h3>
+
+                    <p>
+                        Happy Customers
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>
+                        10,000+
+                    </h3>
+
+                    <p>
+                        Verified Professionals
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>
+                        50+
+                    </h3>
+
+                    <p>
+                        Services
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3>
+                        4.8★
+                    </h3>
+
+                    <p>
+                        Average Rating
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
 </body>
+
 </html>
